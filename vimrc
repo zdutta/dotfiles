@@ -291,6 +291,7 @@ let g:NERDTreeWinSize = 50
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 "nnoremap <silent> <F2> :NERDTreeFind<CR>
 autocmd VimEnter * NERDTree | wincmd p
+:let g:NERDTreeWinSize=30
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 " grep.vim
