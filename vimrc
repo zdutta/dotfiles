@@ -8,6 +8,7 @@ if has('vim_starting')
   set nocompatible               " Be iMproved
 endif
 
+
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
 let g:vim_bootstrap_langs = "c,go,html,javascript,python"
@@ -126,7 +127,6 @@ call plug#end()
 
 " Required:
 filetype plugin indent on
-
 
 "*****************************************************************************
 "" Basic Setup
@@ -290,7 +290,7 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 "nnoremap <silent> <F2> :NERDTreeFind<CR>
-"autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree | wincmd p
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 " grep.vim
