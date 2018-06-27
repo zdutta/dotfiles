@@ -356,8 +356,8 @@ set autoread
 "*****************************************************************************
 
 ""Custom
-map <C-j> <C-W>j
-map <C-k> <C-W>k
+
+
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
@@ -369,12 +369,15 @@ let g:python_highlight_all = 1
 nnoremap <F5> :GundoToggle<CR>
 nnoremap e :+10<CR>
 nnoremap r :-10<CR>
+nnoremap qq :qa!<CR>
+nnoremap ww :w<CR>
+nnoremap wq :x<CR>
 
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
-noremap <C-Down> :vertical resize -5<CR>
-noremap <C-Up> :vertical resize +5<CR>
+noremap <C-j> :vertical resize -5<CR>
+noremap <C-k> :vertical resize +5<CR>
 "" Git
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Gcommit<CR>
