@@ -290,7 +290,7 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 "nnoremap <silent> <F2> :NERDTreeFind<CR>
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * NERDTree | wincmd p
 :let g:NERDTreeWinSize=30
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
@@ -358,6 +358,10 @@ set autoread
 
 ""Custom
 
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
 
 map <C-h> <C-W>h
 map <C-l> <C-W>l
@@ -366,12 +370,16 @@ inoremap jj <Esc>
 inoremap kk <Esc>
 inoremap JJ <Esc>
 inoremap KK <Esc>
+inoremap hh <Esc> o
+inoremap HH <Esc> o 
+
 let g:python_highlight_all = 1
 nnoremap <F5> :GundoToggle<CR>
 nnoremap e :+10<CR>
 nnoremap r :-10<CR>
-nnoremap qq :qa!<CR>
-nnoremap ww :w<CR>
+nnoremap qa :qa!<CR>
+nnoremap qq :q<CR>
+nnoremap ws :w<CR>
 nnoremap wq :x<CR>
 
 "" Split
@@ -388,6 +396,9 @@ noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
+
+"ycm config
+let g:ycm_python_binary_path = 'python'
 
 " session management
 nnoremap <leader>so :OpenSession<Space>
@@ -659,4 +670,3 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
-
