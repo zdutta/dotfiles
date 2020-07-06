@@ -34,6 +34,7 @@ call plug#begin(expand('~/.vim/plugged'))
 "" Plug install packages
 "*****************************************************************************
 Plug 'sjl/gundo.vim'
+Plug 'derekwyatt/vim-scala'
 Plug 'Valloric/YouCompleteMe'
 Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/nerdtree'
